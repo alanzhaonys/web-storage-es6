@@ -1,6 +1,6 @@
 {
   "name": "web-storage-es6",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Web storage abstraction classes",
   "repository": {
     "type": "git",
