@@ -12,6 +12,7 @@ This is a library written in ES6. It provides an abstraction layer for using the
 
 ### Usage Summary
 ```
+// Include library
 const WebStorageES6 = require('web-storage-es6');
 
 // Create a local storage with 'default' namespace
