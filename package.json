@@ -2,9 +2,9 @@
   "name": "web-storage-es6",
   "version": "1.0.1",
   "description": "Web storage abstraction classes",
-  "repository":
-  { "type" : "git"
-  , "url" : "https://github.com/alanzhaonys/web-storage-es6"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alanzhaonys/web-storage-es6"
   },
   "main": "dist/index.js",
   "scripts": {
@@ -35,5 +35,8 @@
     "istanbul": "^0.4.5",
     "mocha": "^4.0.1",
     "webpack": "^3.10.0"
+  },
+  "dependencies": {
+    "jsdoc-to-markdown": "^3.0.2"
   }
 }

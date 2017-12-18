@@ -16,7 +16,8 @@ class WebStorageES6 {
    * @access public
    * @param {string} storageType      - The storage type
    * @param {string} namespace        - The storage namespace
-   * @return {Object}                 - The mock storage object, used for testing in headless environment
+   * @param {Object} injectedStorage  - The mock storage object, used for testing in headless environment
+   * @return {Object}                 - The storage object
    */
   constructor(storageType, namespace = 'default', injectedStorage = null) {
     var storage = null;

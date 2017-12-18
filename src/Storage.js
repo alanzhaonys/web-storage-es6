@@ -84,7 +84,7 @@ export class Storage {
   }
 
   /**
-   * Retrieve an item and forget it
+   * Retrieve an item and forgets it
    *
    * @access public
    * @param {string} key      - The data key
