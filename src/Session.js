@@ -11,7 +11,10 @@ export class Session extends Storage {
    * @param {string} namespace    - The namespace of storage
    * @param {Object} storage      - The storage, allows injection
    */
-  constructor(namespace = 'default', storage = sessionStorage) {
+  constructor(namespace = 'default', storage = null) {
+    if (!storage) {
+      storage = sessionStorage;
+    }
     super(namespace, storage);
     this._type = 'Session';
   }

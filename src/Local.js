@@ -11,7 +11,10 @@ export class Local extends Storage {
    * @param {string} namespace    - The namespace of storage
    * @param {Object} storage      - The storage, allows injection
    */
-  constructor(namespace = 'default', storage = localStorage) {
+  constructor(namespace = 'default', storage = null) {
+    if (!storage) {
+      storage = localStorage;
+    }
     super(namespace, storage);
     this._type = 'Local';
   }
