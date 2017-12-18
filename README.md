@@ -162,7 +162,7 @@ Store an item
 <a name="Storage+pull"></a>
 
 ### storage.pull(key, value) ⇒ <code>string</code>
-Retrieve an item and forgets it
+Retrieve an item and forget it
 
 **Kind**: instance method of [<code>Storage</code>](#Storage)  
 **Returns**: <code>string</code> - - The data value  
