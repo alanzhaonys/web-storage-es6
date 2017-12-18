@@ -1,25 +1,37 @@
 # WORK IN PROGRESS - PLEASE COME BACK SOON
 # Web Storage ES6 [![Build Status][travis-image]][travis-url] [![Coveralls Status][coveralls-image]][coveralls-url]
 
+This is a library written in ES6. It provides abstraction layer to use the HTML5 web storages, `localStorage` and `sessionStorage`. On top of the utilizing the standard `Storage` types, a `Global` storage is introduced for temporary data storage.
+
 ## Quick Overview
-* Local - A type of *localStorage*. Data persists until explicitly deleted by user. It has no expiration date
-* Session - A type of *sessionStorage*. Data lasts for as long as the browser is open and survives over page reloads
-* Global - Stores data in the global *window* variable. Data only lasts inside a single page session and will be destroyed upon page reload
+* *Local* - A type of `localStorage`. Data persists until explicitly deleted by user. It has no expiration date
+* *Session* - A type of `sessionStorage`. Data lasts for as long as the browser is open and survives over page reloads
+* *Global* - Stores data in the global `window` variable. Data only lasts inside a single page session and will be destroyed upon page reload
 
 ### Installation
 `npm install --save web-storage-es6`
 
-### Code
+### Usage Summary
 ```
 const WebStorageES6 = require('web-storage-es6');
 
-// 'default' namespace
-var local = new WebStorageES6('Local');
-local.set('var1', 'value1');
+// Create a local storage with 'default' namespace
+var localStorage = new WebStorageES6('Local');
 
-// 'custom' namespace
-var customStorage = new WebStorageES6('Local', 'custom');
-customStorage.set('var1', 'value1');
+// Create a session storage with 'default' namespace
+var sessionStorage = new WebStorageES6('Session');
+
+// Create a global storage with 'custom' namespace
+var customGlobalStorage = new WebStorageES6('Global', 'custom');
+
+// Sets `var1` to `value1`
+localStorage.set('var1', 'value1');
+
+// Checks if `var1` exists
+localStorage.has('var1');
+
+// Removes `var1` from storage
+localStorage.forget('var1');
 ```
 
 ## License
