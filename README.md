@@ -7,10 +7,10 @@ This is a library written in ES6. It provides an abstraction layer for using the
 * *Session* - A type of `sessionStorage`. Data lasts for as long as the browser is open and survives over page reloads
 * *Global* - Stores data in the global `window` variable. Data only lasts inside a single page session and will be destroyed upon page reload
 
-### Installation
+## Installation
 `npm install --save web-storage-es6`
 
-### Usage Summary
+## Usage Summary
 ```
 // Include library
 const WebStorageES6 = require('web-storage-es6');
