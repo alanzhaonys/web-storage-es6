@@ -1,5 +1,5 @@
 # WORK IN PROGRESS - PLEASE COME BACK SOON
-# Web Storage ES6 [![NPM version][npm-image]][npm-url] [![Downloads][downloads-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coveralls Status][coveralls-image]][coveralls-url]
+# Web Storage ES6 [![Build Status][travis-image]][travis-url] [![Coveralls Status][coveralls-image]][coveralls-url]
 
 ## Quick Overview
 * Local - A type of *localStorage*. Data persists until explicitly deleted by user. It has no expiration date
@@ -24,11 +24,6 @@ customStorage.set('var1', 'value1');
 
 ## License
 MIT - See included LICENSE.md
-
-[npm-url]: https://npmjs.org/package/web-storage-es6
-[npm-image]: http://img.shields.io/npm/v/web-storage-es6.svg
-
-[downloads-image]: http://img.shields.io/npm/dm/web-storage-es6.svg
 
 [travis-url]: https://travis-ci.org/alanzhaonys/web-storage-es6
 [travis-image]: https://travis-ci.org/alanzhaonys/web-storage-es6.svg?branch=master
