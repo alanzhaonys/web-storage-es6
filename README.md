@@ -1,7 +1,7 @@
 # WORK IN PROGRESS - PLEASE COME BACK SOON
 # Web Storage ES6 [![Build Status][travis-image]][travis-url] [![Coveralls Status][coveralls-image]][coveralls-url]
 
-This is a library written in ES6. It provides an abstraction layer for using the HTML5 web storages, `localStorage` and `sessionStorage`. On top of the utilizing the standard `Storage` types, a `Global` storage is introduced for temporary data storage.
+This is a library written in ES6. It provides an abstraction layer for using the HTML5 web storages, `localStorage` and `sessionStorage`. On top of utilizing these `Storage` types, a `Global` storage is introduced for temporary data storage.
 
 ## Quick Overview
 * *Local* - A type of `localStorage`. Data persists until explicitly deleted by user. It has no expiration date
