@@ -1,4 +1,3 @@
-# WORK IN PROGRESS - PLEASE COME BACK SOON
 # Web Storage ES6 [![Build Status][travis-image]][travis-url] [![Coveralls Status][coveralls-image]][coveralls-url]
 
 This is a library written in ES6. It provides an abstraction layer for using the HTML5 web storages, `localStorage` and `sessionStorage`. On top of utilizing these `Storage` types, a `Global` storage is introduced for temporary data storage.
@@ -42,15 +41,18 @@ localStorage.forget('var1');
 **Access**: public  
 <a name="new_WebStorageES6_new"></a>
 
-### new WebStorageES6(storageType, namespace)
+### new WebStorageES6(storageType, namespace, injectedStorage)
 Constructor
 
-**Returns**: <code>Object</code> - - The mock storage object, used for testing in headless environment  
+**Returns**: <code>Object</code> - - The storage object  
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
 | storageType | <code>string</code> |  | The storage type |
 | namespace | <code>string</code> | <code>&quot;default&quot;</code> | The storage namespace |
+| injectedStorage | <code>Object</code> | <code></code> | The mock storage object, used for testing in headless environment |
+
+
 
 <a name="Storage"></a>
 
