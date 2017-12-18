@@ -53,7 +53,7 @@ export class Storage {
    *
    * @access public
    * @param {string} key      - The data key
-   * @param {string} value    - The default value
+   * @param {string} defaultValue    - The default value
    * @param {string|null}     - The data value
    */
   get(key, defaultValue = null) {
@@ -88,7 +88,7 @@ export class Storage {
    *
    * @access public
    * @param {string} key      - The data key
-   * @param {string} value    - The default value
+   * @param {string} defaultValue    - The default value
    * @return {string}         - The data value
    */
   pull(key, defaultValue) {
