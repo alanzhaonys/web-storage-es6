@@ -38,26 +38,6 @@ localStorage.forget('var1');
 ```
 ## API
 
-<a name="WebStorageES6"></a>
-
-## WebStorageES6
-**Kind**: global class  
-**Access**: public  
-<a name="new_WebStorageES6_new"></a>
-
-### new WebStorageES6(storageType, namespace, injectedStorage)
-Constructor
-
-**Returns**: <code>Object</code> - - The storage object  
-
-| Param | Type | Default | Description |
-| --- | --- | --- | --- |
-| storageType | <code>string</code> |  | The storage type |
-| namespace | <code>string</code> | <code>&quot;default&quot;</code> | The storage namespace |
-| injectedStorage | <code>Object</code> | <code></code> | The mock storage object, used for testing in headless environment |
-
-
-
 <a name="Storage"></a>
 
 ## Storage
@@ -71,9 +51,9 @@ Constructor
     * [._setData()](#Storage+_setData)
     * [._getData()](#Storage+_getData)
     * [._extend(obj, src)](#Storage+_extend)
-    * [.get(key, value)](#Storage+get)
+    * [.get(key, defaultValue)](#Storage+get)
     * [.put(key, value)](#Storage+put)
-    * [.pull(key, value)](#Storage+pull) ⇒ <code>string</code>
+    * [.pull(key, defaultValue)](#Storage+pull) ⇒ <code>string</code>
     * [.has(key)](#Storage+has) ⇒ <code>boolean</code>
     * [.populate(data)](#Storage+populate)
     * [.all()](#Storage+all) ⇒ <code>Object</code>
@@ -138,17 +118,17 @@ Merge two objects
 
 <a name="Storage+get"></a>
 
-### storage.get(key, value)
+### storage.get(key, defaultValue)
 Retrieve an item or return a default value
 
 **Kind**: instance method of [<code>Storage</code>](#Storage)  
 **Access**: public  
 
-| Param | Type | Description |
-| --- | --- | --- |
-| key | <code>string</code> | The data key |
-| value | <code>string</code> | The default value |
-|  | <code>string</code> \| <code>null</code> | The data value |
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| key | <code>string</code> |  | The data key |
+| defaultValue | <code>string</code> | <code>null</code> | The default value |
+|  | <code>string</code> \| <code>null</code> |  | The data value |
 
 <a name="Storage+put"></a>
 
@@ -165,7 +145,7 @@ Store an item
 
 <a name="Storage+pull"></a>
 
-### storage.pull(key, value) ⇒ <code>string</code>
+### storage.pull(key, defaultValue) ⇒ <code>string</code>
 Retrieve an item and forget it
 
 **Kind**: instance method of [<code>Storage</code>](#Storage)  
@@ -175,7 +155,7 @@ Retrieve an item and forget it
 | Param | Type | Description |
 | --- | --- | --- |
 | key | <code>string</code> | The data key |
-| value | <code>string</code> | The default value |
+| defaultValue | <code>string</code> | The default value |
 
 <a name="Storage+has"></a>
 
@@ -241,6 +221,7 @@ Remove all items
 
 **Kind**: instance method of [<code>Storage</code>](#Storage)  
 **Access**: public  
+
 
 <a name="Local"></a>
 
