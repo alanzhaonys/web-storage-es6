@@ -36,6 +36,31 @@ localStorage.has('var1');
 // Removes `var1` from storage
 localStorage.forget('var1');
 ```
+
+### Don'ts
+```
+// Writing to storage is slow
+for (let i = 0; i < 100; i++) {
+  storage.put('var' + i, i);
+}
+```
+
+### Dos
+```
+var data = {};
+
+for (let i = 0; i < 100; i++) {
+  data['var' + i] = i;
+}
+
+// Write at once
+storage.populate(data);
+
+// or append to existing data
+storage.append(data);
+
+```
+
 ## API
 
 <a name="Storage"></a>
