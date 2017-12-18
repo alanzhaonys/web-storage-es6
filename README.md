@@ -34,6 +34,24 @@ localStorage.has('var1');
 localStorage.forget('var1');
 ```
 ## API
+
+<a name="WebStorageES6"></a>
+
+## WebStorageES6
+**Kind**: global class  
+**Access**: public  
+<a name="new_WebStorageES6_new"></a>
+
+### new WebStorageES6(storageType, namespace)
+Constructor
+
+**Returns**: <code>Object</code> - - The mock storage object, used for testing in headless environment  
+
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| storageType | <code>string</code> |  | The storage type |
+| namespace | <code>string</code> | <code>&quot;default&quot;</code> | The storage namespace |
+
 <a name="Storage"></a>
 
 ## Storage
@@ -142,7 +160,7 @@ Store an item
 <a name="Storage+pull"></a>
 
 ### storage.pull(key, value) ⇒ <code>string</code>
-Retrieve an item and forget it
+Retrieve an item and forgets it
 
 **Kind**: instance method of [<code>Storage</code>](#Storage)  
 **Returns**: <code>string</code> - - The data value  
@@ -217,6 +235,77 @@ Remove all items
 
 **Kind**: instance method of [<code>Storage</code>](#Storage)  
 **Access**: public  
+
+<a name="Local"></a>
+
+## Local
+**Kind**: global class  
+**Access**: public  
+<a name="new_Local_new"></a>
+
+### new Local(namespace, storage)
+Constructor
+
+
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| namespace | <code>string</code> | <code>&quot;default&quot;</code> | The namespace of storage |
+| storage | <code>Object</code> |  | The storage, allows injection |
+
+
+<a name="Session"></a>
+
+## Session
+**Kind**: global class  
+**Access**: public  
+<a name="new_Session_new"></a>
+
+### new Session(namespace, storage)
+Constructor
+
+
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| namespace | <code>string</code> | <code>&quot;default&quot;</code> | The namespace of storage |
+| storage | <code>Object</code> |  | The storage, allows injection |
+
+
+<a name="Global"></a>
+
+## Global
+**Kind**: global class  
+**Access**: public  
+
+* [Global](#Global)
+    * [new Global(namespace)](#new_Global_new)
+    * [._setData()](#Global+_setData)
+    * [._getData()](#Global+_getData)
+
+<a name="new_Global_new"></a>
+
+### new Global(namespace)
+Constructor
+
+
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| namespace | <code>string</code> | <code>&quot;default&quot;</code> | The namespace of storage |
+
+<a name="Global+_setData"></a>
+
+### global._setData()
+Save data to global variable
+
+**Kind**: instance method of [<code>Global</code>](#Global)  
+**Access**: protected  
+<a name="Global+_getData"></a>
+
+### global._getData()
+Get data from global variable
+
+**Kind**: instance method of [<code>Global</code>](#Global)  
+**Access**: protected  
+
 
 ## License
 MIT - See included LICENSE.md
