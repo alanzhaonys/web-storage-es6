@@ -28,7 +28,7 @@ var sessionStorage = new WebStorageES6('Session');
 var customGlobalStorage = new WebStorageES6('Global', 'custom');
 
 // Sets `var1` to `value1`
-localStorage.set('var1', 'value1');
+localStorage.put('var1', 'value1');
 
 // Checks if `var1` exists
 localStorage.has('var1');
