@@ -35,8 +35,5 @@
     "istanbul": "^0.4.5",
     "mocha": "^4.0.1",
     "webpack": "^3.10.0"
-  },
-  "dependencies": {
-    "jsdoc-to-markdown": "^3.0.2"
   }
 }
