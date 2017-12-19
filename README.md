@@ -58,7 +58,6 @@ storage.populate(data);
 
 // or append to existing data
 storage.append(data);
-
 ```
 
 ## API
