@@ -27,13 +27,13 @@ var sessionStorage = new WebStorageES6('Session');
 // Create a global storage with 'custom' namespace
 var customGlobalStorage = new WebStorageES6('Global', 'custom');
 
-// Sets `var1` to `value1`
+// Sets 'var1' to 'value1'
 localStorage.put('var1', 'value1');
 
-// Checks if `var1` exists
+// Checks if 'var1' exists
 localStorage.has('var1');
 
-// Removes `var1` from storage
+// Removes 'var1' from storage
 localStorage.forget('var1');
 ```
 
