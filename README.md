@@ -39,7 +39,7 @@ localStorage.forget('var1');
 
 ### Don'ts
 ```
-// Writing to storage is slow
+// Writing to storage is slow if you need to save repetitive data in loops
 for (let i = 0; i < 100; i++) {
   storage.put('var' + i, i);
 }
@@ -47,6 +47,7 @@ for (let i = 0; i < 100; i++) {
 
 ### Dos
 ```
+// Create data first
 var data = {};
 
 for (let i = 0; i < 100; i++) {
