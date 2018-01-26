@@ -13,8 +13,8 @@ export class Global extends Storage {
   constructor(namespace = 'default') {
     super(namespace, null);
     this._type = 'Global';
+
     if (typeof window === 'undefined') {
-      // Good for unit testing only, not a true global variable
       this._global = {};
     } else {
       this._global = window;

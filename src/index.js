@@ -16,26 +16,17 @@ class WebStorageES6 {
    * @access public
    * @param {string} storageType      - The storage type
    * @param {string} namespace        - The storage namespace
-   * @param {Object} injectedStorage  - The mock storage object, used for testing in headless environment
    * @return {Object}                 - The storage object
    */
-  constructor(storageType, namespace = 'default', injectedStorage = null) {
+  constructor(storageType, namespace = 'default') {
     var storage = null;
 
     switch (storageType.toLowerCase()) {
       case 'local':
-        if (injectedStorage) {
-          storage = new Local(namespace, injectedStorage);
-        } else {
-          storage = new Local(namespace);
-        }
+        storage = new Local(namespace);
         break;
       case 'session':
-        if (injectedStorage) {
-          storage = new Session(namespace, injectedStorage);
-        } else {
-          storage = new Session(namespace);
-        }
+        storage = new Session(namespace);
         break;
       case 'global':
         storage = new Global(namespace);

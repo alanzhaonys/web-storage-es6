@@ -2,6 +2,8 @@ import {
   Storage
 } from './Storage';
 
+const storageMock = require('./StorageMock');
+
 export class Session extends Storage {
   /**
    * Constructor
@@ -9,12 +11,16 @@ export class Session extends Storage {
    * @constructor
    * @access public
    * @param {string} namespace    - The namespace of storage
-   * @param {Object} storage      - The storage, allows injection
    */
-  constructor(namespace = 'default', storage = null) {
-    if (!storage) {
+  constructor(namespace = 'default') {
+    let storage = null;
+
+    if (typeof sessionStorage === 'undefined') {
+      storage = storageMock();
+    } else {
       storage = sessionStorage;
     }
+
     super(namespace, storage);
     this._type = 'Session';
   }
