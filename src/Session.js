@@ -11,7 +11,7 @@ export class Session extends Storage {
    * @constructor
    * @access public
    * @param {string} namespace        - The namespace of storage
-   * @param {Object} storageOverride  - Provide a custom storage object, useful for testing
+   * @param {object} storageOverride  - Provide a custom storage object, useful for testing
    */
   constructor(namespace = 'default', storageOverride = null) {
     let storage = null;

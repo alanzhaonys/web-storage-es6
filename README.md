@@ -134,7 +134,7 @@ Merge two objects
 
 **Kind**: instance method of [<code>Storage</code>](#Storage)  
 **Access**: protected  
-**Rturn**: <code>Object</code>          - Merged object  
+**Returns**: <code>Object</code>          - Merged object  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -246,77 +246,6 @@ Remove all items
 
 **Kind**: instance method of [<code>Storage</code>](#Storage)  
 **Access**: public  
-
-
-<a name="Local"></a>
-
-## Local
-**Kind**: global class  
-**Access**: public  
-<a name="new_Local_new"></a>
-
-### new Local(namespace, storage)
-Constructor
-
-
-| Param | Type | Default | Description |
-| --- | --- | --- | --- |
-| namespace | <code>string</code> | <code>&quot;default&quot;</code> | The namespace of storage |
-| storage | <code>Object</code> |  | The storage, allows injection |
-
-
-<a name="Session"></a>
-
-## Session
-**Kind**: global class  
-**Access**: public  
-<a name="new_Session_new"></a>
-
-### new Session(namespace, storage)
-Constructor
-
-
-| Param | Type | Default | Description |
-| --- | --- | --- | --- |
-| namespace | <code>string</code> | <code>&quot;default&quot;</code> | The namespace of storage |
-| storage | <code>Object</code> |  | The storage, allows injection |
-
-
-<a name="Global"></a>
-
-## Global
-**Kind**: global class  
-**Access**: public  
-
-* [Global](#Global)
-    * [new Global(namespace)](#new_Global_new)
-    * [._setData()](#Global+_setData)
-    * [._getData()](#Global+_getData)
-
-<a name="new_Global_new"></a>
-
-### new Global(namespace)
-Constructor
-
-
-| Param | Type | Default | Description |
-| --- | --- | --- | --- |
-| namespace | <code>string</code> | <code>&quot;default&quot;</code> | The namespace of storage |
-
-<a name="Global+_setData"></a>
-
-### global._setData()
-Save data to global variable
-
-**Kind**: instance method of [<code>Global</code>](#Global)  
-**Access**: protected  
-<a name="Global+_getData"></a>
-
-### global._getData()
-Get data from global variable
-
-**Kind**: instance method of [<code>Global</code>](#Global)  
-**Access**: protected  
 
 
 ## License

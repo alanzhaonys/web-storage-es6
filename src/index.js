@@ -16,8 +16,8 @@ class WebStorageES6 {
    * @access public
    * @param {string} storageType      - The storage type
    * @param {string} namespace        - The storage namespace
-   * @param {Object} storageOverride  - Provide a custom storage object, useful for testing
-   * @return {Object}                 - The storage object
+   * @param {object} storageOverride  - Provide a custom storage object, useful for testing
+   * @returns {object}                - The storage object
    */
   constructor(storageType, namespace = 'default', storageOverride = null) {
     var storage = null;

@@ -5,7 +5,7 @@ export class Storage {
    * @constructor
    * @access public
    * @param {string} namespace    - The namespace of storage
-   * @param {Object} storage      - The storage type
+   * @param {object} storage      - The storage type
    */
   constructor(namespace, storage) {
     this._namespace = namespace;
@@ -37,9 +37,9 @@ export class Storage {
    * Merge two objects
    *
    * @access protected
-   * @param {Object} obj      - Destination object
-   * @param {Object} src      - Source object
-   * @rturn {Object}          - Merged object
+   * @param {object} obj  - Destination object
+   * @param {object} src  - Source object
+   * @returns {object}    - Merged object
    */
   _extend(obj, src) {
     for (let key in src) {
@@ -52,9 +52,9 @@ export class Storage {
    * Retrieve an item or return a default value
    *
    * @access public
-   * @param {string} key      - The data key
-   * @param {string} defaultValue    - The default value
-   * @param {string|null}     - The data value
+   * @param {string} key          - The data key
+   * @param {string} defaultValue - The default value
+   * @param {string|null}         - The data value
    */
   get(key, defaultValue = null) {
     var value = null;
@@ -87,9 +87,9 @@ export class Storage {
    * Retrieve an item and forget it
    *
    * @access public
-   * @param {string} key      - The data key
-   * @param {string} defaultValue    - The default value
-   * @return {string}         - The data value
+   * @param {string} key          - The data key
+   * @param {string} defaultValue - The default value
+   * @returns {string}            - The data value
    */
   pull(key, defaultValue) {
     var value = this.get(key, defaultValue);
@@ -103,8 +103,8 @@ export class Storage {
    * Whether or not an item exists
    *
    * @access public
-   * @param {string} key      - The data key
-   * @return {boolean}        - Whether or not item exists
+   * @param {string} key  - The data key
+   * @returns {boolean}   - Whether or not item exists
    */
   has(key) {
     this._getData();
@@ -118,7 +118,7 @@ export class Storage {
    * Set all items
    *
    * @access public
-   * @param {Object} data      - Data object
+   * @param {object} data - Data object
    */
   populate(data) {
     this._data = data;
@@ -129,7 +129,7 @@ export class Storage {
    * Retrieve all items
    *
    * @access public
-   * @return {Object}         - All data
+   * @returns {object}  - All data
    */
   all() {
     this._getData();
@@ -140,7 +140,7 @@ export class Storage {
    * Append to current items
    *
    * @acess public
-   * @param {Object} data     - Data to append
+   * @param {object} data - Data to append
    */
   append(data) {
     this._getData();
@@ -152,7 +152,7 @@ export class Storage {
    * Remove an item
    *
    * @access public
-   * @param {string} key      - The data key
+   * @param {string} key  - The data key
    */
   forget(key) {
     this._getData();
@@ -174,7 +174,7 @@ export class Storage {
    * Get namespace
    *
    * @access public
-   * @return {string}        - The namespace
+   * @returns {string}  - The namespace
    */
   get namespace() {
     return this._namespace;
@@ -184,7 +184,7 @@ export class Storage {
    * Get storage type
    *
    * @access public
-   * @return {string}         - The storage type
+   * @returns {string}  - The storage type
    */
   get type() {
     return this._type;
