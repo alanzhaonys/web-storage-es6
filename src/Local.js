@@ -10,15 +10,21 @@ export class Local extends Storage {
    *
    * @constructor
    * @access public
-   * @param {string} namespace    - The namespace of storage
+   * @param {string} namespace        - The namespace of storage
+   * @param {Object} storageOverride  - Provide a custom storage object, useful for testing
    */
-  constructor(namespace = 'default') {
+  constructor(namespace = 'default', storageOverride = null) {
     let storage = null;
 
-    if (typeof localStorage === 'undefined') {
-      storage = storageMock();
+    if (storageOverride) {
+      storage = storageOverride;
     } else {
-      storage = localStorage;
+      if (typeof localStorage === 'undefined') {
+        // Use a fallback storage if localStorage is not available
+        storage = storageMock();
+      } else {
+        storage = localStorage;
+      }
     }
 
     super(namespace, storage);

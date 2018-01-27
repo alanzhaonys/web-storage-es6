@@ -10,15 +10,21 @@ export class Session extends Storage {
    *
    * @constructor
    * @access public
-   * @param {string} namespace    - The namespace of storage
+   * @param {string} namespace        - The namespace of storage
+   * @param {Object} storageOverride  - Provide a custom storage object, useful for testing
    */
-  constructor(namespace = 'default') {
+  constructor(namespace = 'default', storageOverride = null) {
     let storage = null;
 
-    if (typeof sessionStorage === 'undefined') {
-      storage = storageMock();
+    if (storageOverride) {
+      storage = storageOverride;
     } else {
-      storage = sessionStorage;
+      if (typeof sessionStorage === 'undefined') {
+        // Use a fallback storage if sessionStorage is not available
+        storage = storageMock();
+      } else {
+        storage = sessionStorage;
+      }
     }
 
     super(namespace, storage);

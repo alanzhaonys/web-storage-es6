@@ -15,6 +15,7 @@ export class Global extends Storage {
     this._type = 'Global';
 
     if (typeof window === 'undefined') {
+      // Fallback to a plain Object if window is not available
       this._global = {};
     } else {
       this._global = window;
@@ -22,7 +23,7 @@ export class Global extends Storage {
   }
 
   /**
-   * Save data to global variable
+   * Method override: save data to global variable
    *
    * @access protected
    */
@@ -31,7 +32,7 @@ export class Global extends Storage {
   }
 
   /**
-   * Get data from global variable
+   * Method override: get data from global variable
    *
    * @access protected
    */
