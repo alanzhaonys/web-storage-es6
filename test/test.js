@@ -1,6 +1,6 @@
 'use strict';
 
-const WebStorageES6 = require('../dist/index');
+const WebStorageES6 = require('../src/index');
 
 var expect = require('chai').expect;
 

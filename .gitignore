@@ -1,12 +1,9 @@
-# Modules
-node_modules/
+# Source
+node_modules/*
 
-# Logs etc
-coverage/
+# Compiled
+dist/*
 
-# IDE
-.idea
-.vscode
-
-# OS
-.DS_Store
+# NYC coverage report
+.nyc_output/*
+coverage/*
