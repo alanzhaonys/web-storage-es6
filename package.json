@@ -1,18 +1,18 @@
 {
   "name": "web-storage-es6",
-  "version": "1.1.1",
+  "version": "1.1.3",
   "description": "This is a library written in ES6. It provides an abstraction layer for using the HTML5 web storages, localStorage and sessionStorage. On top of utilizing these Storage types, a Global storage is introduced for temporary data storage.",
   "repository": {
     "type": "git",
     "url": "https://github.com/alanzhaonys/web-storage-es6"
   },
-  "main": "dist/index.js",
+  "main": "dist/src/index.js",
   "scripts": {
     "lint": "eslint ./src/* && eslint ./test/*",
     "test": "mocha --reporter spec --require babel-core/register ./test/*",
     "cover": "nyc --extension .js --reporter=lcov --reporter=text mocha --require babel-core/register ./test/*",
     "doc": "jsdoc ./src/* -d ./doc",
-    "build": "rimraf ./dist && eslint ./src/* && babel ./ --out-dir ./dist --ignore ./node_modules,./.babelrc,./package.json,./yarn.lock,./test,./doc,./coverage,./README.md,./TODO.md --copy-files"
+    "build": "rimraf ./dist && eslint ./src/* && babel ./src/*.js --out-dir ./dist"
   },
   "keywords": [
     "web",
