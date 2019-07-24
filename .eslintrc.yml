@@ -6,6 +6,9 @@ extends: 'eslint:recommended'
 globals:
   Atomics: readonly
   SharedArrayBuffer: readonly
+  localStorage: true
+  sessionStorage: true
+  window: true
 parserOptions:
   ecmaVersion: 2018
   sourceType: module
