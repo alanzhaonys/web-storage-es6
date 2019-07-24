@@ -30,6 +30,12 @@ var customGlobalStorage = new WebStorageES6('Global', 'custom');
 // Sets 'var1' to 'value1'
 localStorage.put('var1', 'value1');
 
+// Gets 'var1'
+localStorage.get('var1');
+
+// Gets 'var1'. If 'var1' is not set, return 'default value'
+localStorage.get('var1', 'default value');
+
 // Checks if 'var1' exists
 localStorage.has('var1');
 
