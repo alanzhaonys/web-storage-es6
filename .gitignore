@@ -1,9 +1,6 @@
 # Source
 node_modules/*
 
-# Compiled
-dist/*
-
 # NYC coverage report
 .nyc_output/*
 coverage/*
